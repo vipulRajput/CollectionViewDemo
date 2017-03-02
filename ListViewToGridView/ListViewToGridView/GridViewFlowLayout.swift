@@ -10,7 +10,7 @@ import UIKit
 
 class GridViewFlowLayout: UICollectionViewFlowLayout {
     
-    let itemHeight: CGFloat = 120
+    let itemHeight: CGFloat = 147
     
     override init() {
         
@@ -21,32 +21,22 @@ class GridViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        
-        super.init(coder: aDecoder)
-        
-        setupLayout()
-        
-        print("ProductsListFlowLayout INIT")
-        
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupLayout() {
         
         minimumInteritemSpacing = 0
-        
+                
         minimumLineSpacing = 1
         
         scrollDirection = .vertical
         
-        print("ProductsListFlowLayout setupLaout")
-    
     }
     
     func itemWidth() -> CGFloat {
         
-        print("ProductsListFlowLayout width")
-    
-        return (collectionView!.frame.width / 2) - 20
+        return (collectionView!.frame.width / 2) - 5
     
     }
     
@@ -54,16 +44,12 @@ class GridViewFlowLayout: UICollectionViewFlowLayout {
         
         set {
             
-            print("ProductsListFlowLayout set")
-            
             self.itemSize = CGSize(width: itemWidth(),height: itemHeight)
             
         }
         
         get {
-        
-            print("ProductsListFlowLayout get")
-            
+         
             return CGSize(width: itemWidth(),height: itemHeight)
         
         }

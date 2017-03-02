@@ -19,12 +19,15 @@ class GridViewCell: UICollectionViewCell {
     }
     
     func populatedData(_ information: [String:String]) {
-        
         let imageInfo = information["ImageUrl"]
         showingGridImage.backgroundColor = UIColor(patternImage: UIImage(named: imageInfo!)!)
         showingGridImageName.text = information["ImageName"]
         
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        contentView.backgroundColor = nil
+    }
     
 }

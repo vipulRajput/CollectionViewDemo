@@ -27,7 +27,12 @@ class ListViewCell: UICollectionViewCell{
         showingListImage.backgroundColor = UIColor(patternImage: UIImage(named: imageInfo!)!)
         
         showingListImageName.text = information["ImageName"]
+    }
+
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        contentView.backgroundColor = nil
     }
 }
 

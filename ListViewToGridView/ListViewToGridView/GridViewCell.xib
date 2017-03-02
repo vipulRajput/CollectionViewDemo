@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridViewCellID" id="gTV-IL-0wX" customClass="GridViewCell" customModule="ListViewToGridView" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="158" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="185" height="135"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="158" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="185" height="135"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjV-8c-lfy">
-                        <rect key="frame" x="0.0" y="0.0" width="158" height="95"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjV-8c-lfy">
+                        <rect key="frame" x="5" y="5" width="175" height="105"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Ey-9h0">
-                        <rect key="frame" x="47" y="99" width="64" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Ey-9h0">
+                        <rect key="frame" x="42" y="110" width="100" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="jgK-B4-8Pz"/>
+                            <constraint firstAttribute="width" constant="100" id="qOn-NK-WVq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.75405999940000001" green="0.76428180069999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <size key="customSize" width="158" height="119"/>
+            <color key="backgroundColor" red="0.33480231840000002" green="0.37309530899999999" blue="0.37956059640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wjV-8c-lfy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="DR6-ui-bJp"/>
+                <constraint firstItem="ROz-Ey-9h0" firstAttribute="top" secondItem="wjV-8c-lfy" secondAttribute="bottom" id="Nd1-2p-tb6"/>
+                <constraint firstItem="wjV-8c-lfy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="dbg-9u-Sg1"/>
+                <constraint firstAttribute="bottom" secondItem="wjV-8c-lfy" secondAttribute="bottom" constant="25" id="dhw-ec-C1n"/>
+                <constraint firstItem="wjV-8c-lfy" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" constant="-10" id="lR1-B0-Agb"/>
+                <constraint firstItem="ROz-Ey-9h0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ta7-dH-YPg"/>
+            </constraints>
+            <size key="customSize" width="185" height="134"/>
             <connections>
                 <outlet property="showingGridImage" destination="wjV-8c-lfy" id="41l-bi-1gW"/>
                 <outlet property="showingGridImageName" destination="ROz-Ey-9h0" id="zMh-mL-rCy"/>
             </connections>
-            <point key="canvasLocation" x="91" y="-68"/>
+            <point key="canvasLocation" x="53.5" y="15.5"/>
         </collectionViewCell>
     </objects>
 </document>

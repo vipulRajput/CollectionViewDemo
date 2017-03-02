@@ -10,21 +10,40 @@ import UIKit
 
 class ListViewFlowLayout: UICollectionViewFlowLayout {
 
-    let itemHeight: CGFloat = 120
+    let itemHeight: CGFloat = 147
     
     
     func itemWidth() -> CGFloat {
-        print("ProductsListFlowLayout width")
+   
         return collectionView!.frame.width
+    }
+    override init() {
+        
+        super.init()
+        
+        setupLayout()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func setupLayout() {
+        
+        minimumInteritemSpacing = 0
+        
+        minimumLineSpacing = 1
+        
+        scrollDirection = .vertical
+        
     }
     
     override var itemSize: CGSize {
         set {
-            print("ProductsListFlowLayout set")
             self.itemSize = CGSize(width: itemWidth(),height: itemHeight)
         }
         get {
-            print("ProductsListFlowLayout get")
             return CGSize(width: itemWidth(),height: itemHeight)
         }
     }
